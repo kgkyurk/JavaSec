@@ -7,7 +7,7 @@ Java安全学习笔记，记录一下自己从0开始学习Java安全的过程�
 
 所以你懂的，本仓库希望给的脚本或者是其他内容更加全面一些，也会加一些如IDEA怎么调试Tomcat这种类似的分享。
 
-该github和仓库最终会对应起来：[博客园- Java安全学习指南](https://www.cnblogs.com/erosion2020/p/18558523)
+该github仓库最终会和我的博客中的内容对应起来：[博客园- Java安全学习指南](https://www.cnblogs.com/erosion2020/p/18558523)
 
 ## 环境准备
 
@@ -79,5 +79,5 @@ JAVA反序列化安全学习笔记，下边的调试代码都是基于ysoserial�
 
 JNDI注入
 
-- log4j2 注入/远程代码执行 漏洞 CVE-2021-44228: [log4j2漏洞点分析 + 代码分析 + JNDIExploit攻击工具分析](https://www.cnblogs.com/erosion2020/p/18583981)
-- log4j2 注入/远程代码执行-2 漏洞 [WAF绕过 + 协议总结 + 信息泄露用法](https://www.cnblogs.com/erosion2020/p/18584933)
+- log4j2 注入/远程代码执行 漏洞 CVE-2021-44228: [log4j2漏洞点分析 + 代码分析 + JNDIExploit攻击工具分析](./D%20-%20JNDI注入/log4j2%20变量注入漏洞-1(CVE-2021-44228)/main.md)
+- log4j2 注入/远程代码执行-2 漏洞 [WAF绕过 + 协议总结 + 信息泄露用法](./D%20-%20JNDI注入/log4j2%20变量注入漏洞-2/main.md)
