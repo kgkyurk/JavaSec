@@ -56,12 +56,17 @@ JAVA反序列化安全学习笔记，下边的调试代码都是基于ysoserial�
   - CC5攻击链：[BadAttributeValueExpException + TiedMapEntry + LazyMap + Transformer](./B%20-%20反序列化/CommonsCollections5（基于ysoserial）/main.md)
   - CC6攻击链：[HashSet + HashMap + TiedMapEntry + LazyMap + Transformer](./B%20-%20反序列化/CommonsCollections6（基于ysoserial）/main.md)
   - CC7攻击链：[HashTable + TiedMapEntry + LazyMap + Transformer](./B%20-%20反序列化/CommonsCollections7（基于ysoserial）/main.md)
+  - CC2+CC5变种攻击链: [BadAttributeValueExpException + TiedMapEntry + LazyMap + ChainedTransformer + TrAXFilter + TemplatesImpl](./B%20-%20反序列化/CC2+CC5变种笔记/CC2+CC5变种笔记.md)
+
 
   ### CB链
 
   `CommonsBeanUtils(CB)`反序列化攻击链
 
   - CB1攻击链：[PriorityQueue + BeanComparator + TemplatesImpl](./B%20-%20反序列化/CommonsBeanUtils1（基于ysoserial）/main.md)
+
+回头有空了再汇总一下反序列化攻击链中的所有利用方法吧，其实汇总之后，你会发现反序列化的链子其实也就是各个类的不同组合而已，用已知的可利用类直接可以互相拼接。但是想要发现新的攻击链，还是非常难滴，师傅究竟是咋挖的，教教俺好不好~
+
 
 ## 内存马
 
