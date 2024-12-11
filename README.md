@@ -17,57 +17,61 @@ Java安全学习笔记，记录一下自己从0开始学习Java安全的过程�
 - JDK8u66、8u71、8u73、8u121、8u231、8u431
 
 [Oracle官方JDK8下载](https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html)
+
 [华为JDK镜像站](https://repo.huaweicloud.com/java/jdk/)
+
 [编程宝库JDK下载地址](http://www.codebaoku.com/jdk/jdk-oracle-jdk1-8.html)
+
 [InJDK下载地址/镜像源导航](https://injdk.cn/)
 
 ## Java基础 & 反射
 
 Java 的 ASM、Javassist 和反射是安全研究的重要方向之一，主要集中在字节码操作和运行时行为分析上。ASM 和 Javassist 允许研究者直接操作字节码，进行漏洞利用链（Gadget Chain）的生成、恶意代码注入，以及对反序列化、动态代理等机制的深入分析；反射则是许多漏洞的核心，例如通过访问控制绕过、内存马注入或动态方法调用实现攻击。它们共同为研究 Java 平台的动态特性和潜在安全风险提供了技术支撑，是理解漏洞机制、开发利用工具和分析攻击链的基础。
 
-- 反射机制: [JAVA反射基础知识 + 修改被private final修饰的字段](https://www.cnblogs.com/erosion2020/p/18559481)
-- ClassLoader: [BootstrapClassLoader + ExtClassLoader + AppClassLoader + 双亲委派](https://www.cnblogs.com/erosion2020/p/18560806)
-- 静态代理&动态代理: [静态代理 + Proxy动态代理](https://www.cnblogs.com/erosion2020/p/18561350)
-- ASM: [访问者模式 + 动态操作(访问/修改)class字节码](https://www.cnblogs.com/erosion2020/p/18561454)
-- RMI(远程方法调用): [RMI基本原理 + 客户端/服务端/注册中心 攻击手法 + Bypass JEP290](https://www.cnblogs.com/erosion2020/p/18568890)
-- JNDI(命名空间及目录服务): [JNDI基本概念 + JNDI/RMI攻击手法 + JNDI/LDAP攻击手法](https://www.cnblogs.com/erosion2020/p/18561646)
-- SPI机制: [SPI基本概念 + SPI攻击](https://www.cnblogs.com/erosion2020/p/18571153)
+- 反射机制: [JAVA反射基础知识 + 修改被private final修饰的字段](./A%20-%20JAVA基础/Java反射/main.md)
+- ClassLoader: [BootstrapClassLoader + ExtClassLoader + AppClassLoader + 双亲委派](./A%20-%20JAVA基础/详解%20JAVAClassLoader/main.md)
+- 静态代理&动态代理: [静态代理 + Proxy动态代理](./A%20-%20JAVA基础/JAVA动态代理&静态代理/main.md)
+- ASM: [访问者模式 + 动态操作(访问/修改)class字节码](./A%20-%20JAVA基础/JAVA%20ASM/main.md)
+- RMI(远程方法调用): [RMI基本原理 + 客户端/服务端/注册中心 攻击手法 + Bypass JEP290](./A%20-%20JAVA基础/RMI远程方法调用/main.md)
+- JNDI(命名空间及目录服务): [JNDI基本概念 + JNDI/RMI攻击手法 + JNDI/LDAP攻击手法](./A%20-%20JAVA基础/JNDI注入/main.md)
+- SPI机制: [SPI基本概念 + SPI攻击](./A%20-%20JAVA基础/SPI/main.md)
+- Debug Tomcat源码: [Tomcat安装 + IDEA创建JAVA WEB项目 + IDEA开启调试Tomcat](./C%20-%20内存马/B%20-%20JAVA%20WEB调试环境搭建/main.md)
 
 ## 反序列化
 
 JAVA反序列化安全学习笔记，下边的调试代码都是基于ysoserial中的代码来记录的。嗯~网上有很多魔改代码，但是如果想要标准系统化的学习的话还是要基于ysoserial这个反序列化漏洞的起源项目来学习。
 
-- Java类转字节码工具: [Java类转Base64编码字符串 + Base64编码字符串转.class文件](https://www.cnblogs.com/erosion2020/p/18595215)
+- Java类转字节码工具: [Java类转Base64编码字符串 + Base64编码字符串转.class文件](./B%20-%20反序列化/Java类转字节码工具/main.md)
 
-- 基础知识：[反序列化漏洞的起源 + JAVA反序列化 + URLDNS](https://www.cnblogs.com/erosion2020/p/18553335)
+- 基础知识：[反序列化漏洞的起源 + JAVA反序列化 + URLDNS](./B%20-%20反序列化/JAVA反序列化学习-前置知识（基于ysoserial）/反序列化与反射介绍.md)
 
 - ### CC链
 
   `CommonsCollections(CC)`反序列化攻击链
 
-  - CC1攻击链：[AnnotationInvocationHandler + Proxy + LazyMap + Transformer](https://www.cnblogs.com/erosion2020/p/18553568)
-  - CC2攻击链：[PriorityQueue + TransformingComparator + Transformer + TemplatesImpl](https://www.cnblogs.com/erosion2020/p/18553815)
-  - CC3攻击链：[AnnotationInvocationHandler + Proxy + LazyMap + Transformer + TrAXFilter + TemplatesImpl](https://www.cnblogs.com/erosion2020/p/18554451)
-  - CC4攻击链：[PriorityQueue + TransformingComparator + TrAXFilter + TemplatesImpl](https://www.cnblogs.com/erosion2020/p/18554783)
-  - CC5攻击链：[BadAttributeValueExpException + TiedMapEntry + LazyMap + Transformer](https://www.cnblogs.com/erosion2020/p/18555069)
-  - CC6攻击链：[HashSet + HashMap + TiedMapEntry + LazyMap + Transformer](https://www.cnblogs.com/erosion2020/p/18555609)
-  - CC7攻击链：[HashTable + TiedMapEntry + LazyMap + Transformer](https://www.cnblogs.com/erosion2020/p/18555705)
+  - CC1攻击链：[AnnotationInvocationHandler + Proxy + LazyMap + Transformer](./B%20-%20反序列化/CommonsCollections1（基于ysoserial）/main.md)
+  - CC2攻击链：[PriorityQueue + TransformingComparator + Transformer + TemplatesImpl](./B%20-%20反序列化/CommonsCollections2（基于ysoserial）/main.md)
+  - CC3攻击链：[AnnotationInvocationHandler + Proxy + LazyMap + Transformer + TrAXFilter + TemplatesImpl](./B%20-%20反序列化/CommonsCollections3（基于ysoserial）/main.md)
+  - CC4攻击链：[PriorityQueue + TransformingComparator + TrAXFilter + TemplatesImpl](./B%20-%20反序列化/CommonsCollections4（基于ysoserial）/main.md)
+  - CC5攻击链：[BadAttributeValueExpException + TiedMapEntry + LazyMap + Transformer](./B%20-%20反序列化/CommonsCollections5（基于ysoserial）/main.md)
+  - CC6攻击链：[HashSet + HashMap + TiedMapEntry + LazyMap + Transformer](./B%20-%20反序列化/CommonsCollections6（基于ysoserial）/main.md)
+  - CC7攻击链：[HashTable + TiedMapEntry + LazyMap + Transformer](./B%20-%20反序列化/CommonsCollections7（基于ysoserial）/main.md)
 
   ### CB链
 
   `CommonsBeanUtils(CB)`反序列化攻击链
 
-  - CB1攻击链：[PriorityQueue + BeanComparator + TemplatesImpl](https://www.cnblogs.com/erosion2020/p/18556800)
+  - CB1攻击链：[PriorityQueue + BeanComparator + TemplatesImpl](./B%20-%20反序列化/CommonsBeanUtils1（基于ysoserial）/main.md)
 
 ## 内存马
 
 内存马是一种无文件Webshell，简单来说就是服务器上不会存在需要链接的webshell脚本文件。 传统webshell会在目标服务器中留存具体的payload文件，但现在安全软件对于静态webshell的查杀能力已经非常的强，可能payload文件在写入的一瞬间就会被查杀，而内存马的原理就是在web组件或者应用程序中，注册一层访问路由，访问者通过这层路由，来执行我们控制器中的代码，一句话就能概括，那就是对访问路径映射及相关处理代码的动态注册。
 
-- JAVA WEB & Tomcat: [Servlet + Filter + Listener + Connector(连接器) + Container(Servlet容器)](https://www.cnblogs.com/erosion2020/p/18573756)
-- JAVA WEB环境搭建: [Tomcat安装 + IDEA创建JAVA WEB项目 + IDEA开启调试Tomcat](https://www.cnblogs.com/erosion2020/p/18574152)
-- Servlet内存马: [Context概念 + Debug Servlet加载过程 + 补充内容](https://www.cnblogs.com/erosion2020/p/18575039)
-- Listener内存马: [Listener示例 + ApplicationListener Debug + Listener内存马代码](https://www.cnblogs.com/erosion2020/p/18575391)
-- Filter内存马: [Filter代码Debug + Filter内存马代码 + 运行](https://www.cnblogs.com/erosion2020/p/18577056)
+- JAVA WEB & Tomcat: [Servlet + Filter + Listener + Connector(连接器) + Container(Servlet容器)](./C%20-%20内存马/A%20-%20JAVA%20WEB与Tomcat基本组件概念/main.md)
+- JAVA WEB环境搭建: [Tomcat安装 + IDEA创建JAVA WEB项目 + IDEA开启调试Tomcat](./C%20-%20内存马/B%20-%20JAVA%20WEB调试环境搭建/main.md)
+- Servlet内存马: [Context概念 + Debug Servlet加载过程 + 补充内容](./C%20-%20内存马/C%20-%20Servlet内存马/main.md)
+- Listener内存马: [Listener示例 + ApplicationListener Debug + Listener内存马代码](./C%20-%20内存马/D%20-%20Listener内存马/main.md)
+- Filter内存马: [Filter代码Debug + Filter内存马代码 + 运行](./C%20-%20内存马/E%20-%20Filter内存马/main.md)
 
 ## 漏洞复现篇
 
