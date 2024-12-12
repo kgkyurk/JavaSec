@@ -45,7 +45,9 @@ JAVA反序列化安全学习笔记，下边的调试代码都是基于ysoserial�
 
 - 基础知识：[反序列化漏洞的起源 + JAVA反序列化 + URLDNS](./B%20-%20反序列化/JAVA反序列化学习-前置知识（基于ysoserial）/反序列化与反射介绍.md)
 
-- ### CC链
+- 详解TemplatesImpl反序列化: [XSLT + Templates + TransletClassLoader](./B%20-%20反序列化/详解TemplatesImpl/main.md)
+
+### CC链
 
   `CommonsCollections(CC)`反序列化攻击链
 
