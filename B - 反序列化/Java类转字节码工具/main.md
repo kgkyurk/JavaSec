@@ -6,7 +6,7 @@
 
 ## Java代码
 
-可以看链接中的Java代码，点击这里[JavaClassByteUtil](./JavaClassByteUtil)
+可以看链接中的Java代码，点击这里[JavaClassByteUtil](./JavaClassByteUtil.java)
 
 
 
