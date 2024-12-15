@@ -42,9 +42,7 @@ Java 的 ASM、Javassist 和反射是安全研究的重要方向之一，主要�
 JAVA反序列化安全学习笔记，下边的调试代码都是基于ysoserial中的代码来记录的。嗯~网上有很多魔改代码，但是如果想要标准系统化的学习的话还是要基于ysoserial这个反序列化漏洞的起源项目来学习。
 
 - Java类转字节码工具: [Java类转Base64编码字符串 + Base64编码字符串转.class文件](./B%20-%20反序列化/Java类转字节码工具/main.md)
-
 - 基础知识：[反序列化漏洞的起源 + JAVA反序列化 + URLDNS](./B%20-%20反序列化/JAVA反序列化学习-前置知识（基于ysoserial）/反序列化与反射介绍.md)
-
 - 详解TemplatesImpl反序列化: [XSLT + Templates + TransletClassLoader](./B%20-%20反序列化/详解TemplatesImpl/main.md)
 
 ### CC链
@@ -88,3 +86,10 @@ JNDI注入
 
 - log4j2 注入/远程代码执行 漏洞 CVE-2021-44228: [log4j2漏洞点分析 + 代码分析 + JNDIExploit攻击工具分析](./D%20-%20JNDI注入/log4j2%20变量注入漏洞-1(CVE-2021-44228)/main.md)
 - log4j2 注入/远程代码执行-2 漏洞 [WAF绕过 + 协议总结 + 信息泄露用法](./D%20-%20JNDI注入/log4j2%20变量注入漏洞-2/main.md)
+
+
+## CTF篇
+
+一直在学Java安全相关的内容，一直没地方实践，让我挖一条新的利用链又不现实，自己也不太能找到好玩的靶场，也不想准备环境。突然就想到做一些CTF题目了，好玩还能加深一下知识点的印象，下边就是一些关于Java安全的题目，主要来自于BUUCTF平台，不过我看BUU上边并没有很多Java安全的题目，还有兄弟们知道哪些oj平台有好玩的Java安全CTF题目吗。
+
+- [VNCTF2022公开赛(easy-java)](./E%20-%20CTF题解/[VNCTF2022公开赛]easyJava/main.md)
