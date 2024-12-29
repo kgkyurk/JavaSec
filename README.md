@@ -74,7 +74,7 @@ JAVA反序列化安全学习笔记，下边的调试代码都是基于ysoserial�
 
   - JDK7u21：[HashSet + HashMap + AnnotationInvocationHandler + TemplatesImpl](./B%20-%20反序列化/JDK7u21/main.md)
 
-  感觉好多CTF比赛有纯JDK的攻击链，主要也就是JDK7u21和JDK8u20这俩，到时候都更一下吧。
+  感觉好多CTF比赛有纯JDK的攻击链，主要也就是JDK7u21以及异常绕过(JDK8u20)，到时候都更一下吧。
 
 ## 内存马
 
