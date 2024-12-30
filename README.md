@@ -16,13 +16,10 @@ Java安全学习笔记，记录一下自己从0开始学习Java安全的过程�
 - JDK7u80
 - JDK8u66、8u71、8u73、8u121、8u231、8u431
 
-[Oracle官方JDK8下载](https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html)
-
-[华为JDK镜像站](https://repo.huaweicloud.com/java/jdk/)
-
-[编程宝库JDK下载地址](http://www.codebaoku.com/jdk/jdk-oracle-jdk1-8.html)
-
-[InJDK下载地址/镜像源导航](https://injdk.cn/)
+- [Oracle官方JDK8下载](https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html)
+- [华为JDK镜像站](https://repo.huaweicloud.com/java/jdk/)
+- [编程宝库JDK下载地址](http://www.codebaoku.com/jdk/jdk-oracle-jdk1-8.html)
+- [InJDK下载地址/镜像源导航](https://injdk.cn/)
 
 ## Java基础 & 反射
 
@@ -37,6 +34,7 @@ Java 的 ASM、Javassist 和反射是安全研究的重要方向之一，主要�
 - SPI机制: [SPI基本概念 + SPI攻击](./A%20-%20JAVA基础/SPI/main.md)
 - Debug Tomcat源码: [Tomcat安装 + IDEA创建JAVA WEB项目 + IDEA开启调试Tomcat](./C%20-%20内存马/B%20-%20JAVA%20WEB调试环境搭建/main.md)
 - 为什么Java的反弹Shell这么奇怪: [Runtime的解析规则 + Base64编码 + 反弹shell示例](./A%20-%20JAVA基础/Runtime反弹shell/main.md)
+- Java反序列化协议分析: [反序列化工具介绍 + 反序列化Demo调试 + 010Editor修改字节码](./A%20-%20JAVA基础/反序列化协议分析/main.md)
 
 ## 反序列化
 
