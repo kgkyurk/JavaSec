@@ -67,13 +67,14 @@ JAVA反序列化安全学习笔记，下边的调试代码都是基于ysoserial�
 
 回头有空了再汇总一下反序列化攻击链中的所有利用方法吧，其实汇总之后，你会发现反序列化的链子其实也就是各个类的不同组合而已，用已知的可利用类直接可以互相拼接。但是想要发现新的攻击链，还是非常难滴，师傅究竟是咋挖的，教教俺好不好~
 
-  ### 原生链
+  ### 其他攻击链
 
-  `JDK`原生反序列化攻击链
+  主要还是ysoserial中除URLDNS、CC、CB之外的其他攻击链。
+  赶紧把ysoserial中的攻击链调完，还有好多东西没学。卷不动啦，师傅~
 
   - JDK7u21：[HashSet + HashMap + AnnotationInvocationHandler + TemplatesImpl](./B%20-%20反序列化/JDK7u21/main.md)
+  - Groovy: [AnnotationInvocationHandler + ConvertedClosure + MethodClosure](./B%20-%20反序列化/Groovy1/main.md)
 
-  感觉好多CTF比赛有纯JDK的攻击链，主要也就是JDK7u21以及异常绕过(JDK8u20)，到时候都更一下吧。
 
 ## 内存马
 
